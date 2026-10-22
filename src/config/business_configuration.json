@@ -1,0 +1,99 @@
+{
+  "standard": "RECONCILIATION MASTER STANDARD 1.0 (V72)",
+  "pricingBasis": "cents",
+  "vehicleTiers": [
+    { "id": "sedan", "label": "Sedan", "detail": "Two-door or four-door car", "multiplier": 1.0 },
+    { "id": "compact-suv", "label": "Compact SUV", "detail": "Crossover or small SUV", "multiplier": 1.2 },
+    { "id": "full-size", "label": "Large SUV / Truck", "detail": "Three-row SUV, van or pickup", "multiplier": 1.4 }
+  ],
+  "services": [
+    {
+      "id": "essential_exterior",
+      "name": "Essential Exterior",
+      "feltCareEnabled": true,
+      "visible": true,
+      "quote": false,
+      "duration": "About 90 minutes on site",
+      "base": 9075,
+      "prices": { "sedan": 9075, "compact-suv": 10890, "full-size": 12705 },
+      "description": "Careful, paint-safe exterior care. Not paint correction, paint protection film, or a ceramic coating.",
+      "inclusions": [
+        "Paint-safe pre-rinse and foam",
+        "Two-bucket contact wash with separate wheel tools",
+        "Wheel and tire care",
+        "Water spotting check on glass, mirrors and badges",
+        "Careful, low-friction dry"
+      ],
+      "exclusions": "Not paint correction, paint protection film, or a ceramic coating."
+    },
+    {
+      "id": "fabric_freshness",
+      "name": "Fabric Freshness",
+      "feltCareEnabled": true,
+      "visible": true,
+      "quote": false,
+      "duration": "About 2 hours on site",
+      "base": 12100,
+      "prices": { "sedan": 12100, "compact-suv": 14520, "full-size": 16940 },
+      "description": "Care for the cabin, fabrics, mats and touchpoints. Specialty stain and odor work is agreed separately.",
+      "inclusions": [
+        "Interior vacuum, including mats and trunk",
+        "Fabric and mat care appropriate to the material",
+        "Touchpoint wipe-down",
+        "Interior glass",
+        "Dry-out check before we leave"
+      ],
+      "exclusions": "Specialty stain and odor work is agreed separately in your Care Plan."
+    },
+    {
+      "id": "total_therapy",
+      "name": "Total Therapy",
+      "feltCareEnabled": true,
+      "visible": true,
+      "quote": false,
+      "duration": "About 3.5 hours on site",
+      "package": true,
+      "combines": ["essential_exterior", "fabric_freshness"],
+      "base": 18150,
+      "prices": { "sedan": 18150, "compact-suv": 21780, "full-size": 25410 },
+      "description": "The approved exterior and interior services together, with one agreed scope.",
+      "inclusions": [
+        "Everything in Essential Exterior",
+        "Everything in Fabric Freshness",
+        "One coordinated visit with a single agreed scope"
+      ],
+      "exclusions": "Specialty work beyond the two approved services is agreed separately in your Care Plan."
+    },
+    {
+      "id": "cured_ceramic_coating",
+      "name": "Cured Ceramic Coating",
+      "feltCareEnabled": false,
+      "visible": true,
+      "quote": true,
+      "specialtyReview": true,
+      "duration": "",
+      "base": 24200,
+      "prices": { "sedan": 24200, "compact-suv": 29040, "full-size": 33880 },
+      "description": "An open conversation about cured ceramic coating. Priced case-by-case in your Care Plan after a personal review.",
+      "inclusions": [
+        "A personal conversation about your goals and the current finish",
+        "A case-by-case scope and price in your Care Plan"
+      ],
+      "exclusions": "No upfront total is calculated here. Scope, prep and price are set individually in your Care Plan."
+    }
+  ],
+  "addOns": [],
+  "availability": {
+    "note": "We confirm the exact visit window with you before the date.",
+    "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "start": "9:00 AM",
+    "end": "4:30 PM"
+  },
+  "labels": {
+    "reply": "You will hear from us personally, usually within a day.",
+    "honesty": "If we are not the right fit for the car or the job, we will say so plainly.",
+    "price": "Final scope and price are confirmed after we review the car."
+  },
+  "travelPolicy": "Any travel surcharge is confirmed with you before work begins. Parking fees for non-private residential or office locations are billed at cost.",
+  "vettingFlag": "requires_human_vetting"
+}

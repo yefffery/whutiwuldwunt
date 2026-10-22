@@ -1,0 +1,36 @@
+# RECONCILIATION MASTER STANDARD 1.0 (V72) — automated deployment guardrails.
+# Compiles the app and scans the source on every pull request or push to main.
+
+name: Reconciliation guardrails
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          npm install -g pnpm@11.25.0
+          pnpm install --frozen-lockfile
+
+      - name: V72 static analysis
+        run: node scripts/guardrails.mjs
+
+      - name: Compile
+        run: npx tsc --noEmit
