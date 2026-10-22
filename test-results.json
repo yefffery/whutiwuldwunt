@@ -1,0 +1,74 @@
+[
+  {
+    "script": "tests/care-interests.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/care-reveal-areas.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/care-value.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/care.test.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/cms-variables.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/content.test.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/cross-conversation-consistency.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/feedback.test.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/felt-care-integrity.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/mascot-moments.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/master-standard-selector.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/member-suppression.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/operating-model.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/operations.test.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/practical-flow.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/promotions.test.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/release-integrity.mjs",
+    "exit": 0
+  },
+  {
+    "script": "tests/theme-philosophy.mjs",
+    "exit": 0
+  }
+]

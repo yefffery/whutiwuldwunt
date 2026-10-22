@@ -1,0 +1,1 @@
+ALTER TABLE `job_operations` ADD `cancelled_reason` text DEFAULT '' NOT NULL;

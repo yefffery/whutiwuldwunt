@@ -1,0 +1,1 @@
+ALTER TABLE `portfolio` ADD `published` integer DEFAULT 1 NOT NULL;

@@ -1,0 +1,1 @@
+ALTER TABLE `care_plans` ADD `token_cipher` text DEFAULT '' NOT NULL;

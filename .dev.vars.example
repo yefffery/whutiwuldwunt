@@ -1,0 +1,4 @@
+# Local portable development only. Replace the link key before using private Care Plans.
+OWNER_EMAIL="seedy@sites.test"
+SITE_ORIGIN="http://localhost:5173"
+CARE_PLAN_LINK_KEY="REPLACE_WITH_64_HEX_CHARACTERS"

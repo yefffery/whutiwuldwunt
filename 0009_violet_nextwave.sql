@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `operations_messages_job_kind_idx` ON `operations_messages` (`request_id`,`kind`);

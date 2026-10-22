@@ -1,0 +1,1 @@
+DROP INDEX `promo_leads_visitor_idx`;
