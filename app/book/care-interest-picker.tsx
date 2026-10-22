@@ -32,7 +32,7 @@ export default function CareInterestPicker({
             <Checkbox checked={selected.includes(interest.id)} onCheckedChange={() => onToggle(interest.id)} />
             <span>
               {interest.label}
-              <small>{interest.note}</small>
+              <small>{interest.description}</small>
             </span>
           </label>
         ))}

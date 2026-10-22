@@ -51,7 +51,7 @@ export default function Proof({ photos = [],filmSrc=PRACTICE_FILM_SRC }: { photo
   </header>
   <div className="real-care-grid">
    {practice.map(item => <figure className="real-care-photo" key={item.id}>
-    <Image src={content?.images[item.role] ? mediaUrl(content.images[item.role]) : item.src} width={1152} height={1536} loading="lazy" unoptimized style={{objectPosition:item.position}} alt={item.alt} />
+    <Image src={content?.images[item.role] ? mediaUrl(content.images[item.role] as string) : item.src} width={1152} height={1536} loading="lazy" unoptimized style={{objectPosition:item.position}} alt={item.alt} />
     <figcaption><h3><SiteText id={`real-care-${item.id}-title`} value={item.title} /></h3><p><SiteText id={`real-care-${item.id}-caption`} value={item.note} /></p></figcaption>
    </figure>)}
   </div>

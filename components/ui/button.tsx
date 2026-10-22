@@ -20,6 +20,7 @@ const buttonVariants = cva(
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "size-9",
+        "icon-xs": "size-6",
       },
     },
     defaultVariants: { variant: "default", size: "default" },
@@ -33,7 +34,7 @@ function Button({
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> & VariantProps<typeof buttonVariants> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "button";
+  const Comp = (asChild ? Slot : "button") as React.ElementType;
   return <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />;
 }
 

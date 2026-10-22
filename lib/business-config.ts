@@ -41,6 +41,7 @@ export interface Availability {
   days: string[];
   start: string;
   end: string;
+  blockedDates?: string[];
 }
 
 export interface BusinessConfig {
@@ -67,7 +68,7 @@ export function tierMultiplier(tier: string): number {
 export function canonicalServiceAmount(serviceId: string, tier: string): number {
   const service = businessConfiguration.services.find((s) => s.id === serviceId);
   if (!service) return 0;
-  const priced = (service.prices ?? {})[tier];
+  const priced = ((service.prices ?? {}) as Record<string, number>)[tier];
   if (typeof priced === "number" && Number.isFinite(priced)) return Math.round(priced);
   return Math.round(service.base * tierMultiplier(tier));
 }

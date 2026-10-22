@@ -12,7 +12,7 @@ import {useSiteContent,useSitePreview} from "./site-text";
 
 export default function FoundingMemberAccess({onContinue}:{onContinue:(interest:string)=>void}){
  const content=useSiteContent();const preview=useSitePreview();const invitation=content?.invitation;
- const b=content?.business||defaultContent.business;const interests=sourceConfig.services.filter(item=>item.visible&&!item.specialtyReview).filter(id=>serviceAvailable(b,id)).map(item=>({id:item.id,label:serviceName(b,item.id)})).concat([{id:'not-sure',label:'I’m still deciding'}]);
+ const b=content?.business||defaultContent.business;const interests=sourceConfig.services.filter(item=>item.visible&&!item.specialtyReview).filter(service=>serviceAvailable(b,service.id)).map(item=>({id:item.id,label:serviceName(b,item.id)})).concat([{id:'not-sure',label:'I’m still deciding'}]);
  const [introStatus,setIntroStatus]=useState("");
  const [open,setOpen]=useState(false);const [step,setStep]=useState(1);const [name,setName]=useState("");const [phone,setPhone]=useState("");const [city,setCity]=useState("");const [vehicle,setVehicle]=useState("");const [interest,setInterest]=useState("");const [note,setNote]=useState("");const [error,setError]=useState("");
  function continueWithContact(event:React.FormEvent<HTMLFormElement>){event.preventDefault();setError("");if(!offerPhoneKey(phone)){setError("Enter a valid U.S. phone number so WIWW can check eligibility.");return;}setStep(2);}

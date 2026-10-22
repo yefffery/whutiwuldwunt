@@ -13,6 +13,9 @@ export interface SiteImages {
   logoId: string;
   darkLogoId: string;
   questionId: string;
+  practiceFoamId?: string;
+  practiceRinseId?: string;
+  practiceRearId?: string;
 }
 
 export interface SiteTheme {

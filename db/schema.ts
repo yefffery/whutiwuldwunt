@@ -20,7 +20,7 @@ export const requests = sqliteTable("requests", {
   care_profile: text("care_profile").notNull().default("{}"),
   building_name: text("building_name").notNull().default(""),
   customer_id: text("customer_id").references(() => customers.id),
-  vehicle_id: text("vehicle_id").references(() => clientVehicles.id),
+  vehicle_id: text("vehicle_id").references(() => client_vehicles.id),
   claimed_code_text: text("claimed_code_text").notNull().default(""),
   // V72 dialogue-flag model: selections travel as raw string arrays and any
   // unresolved onboarding answer is flagged for human vetting.
